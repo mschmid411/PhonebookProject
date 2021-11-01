@@ -12,26 +12,20 @@ public class Main {
         StoredData directory = new StoredData();
         Person newPerson = new Person();
      
-
         Address a1 = new Address("Market St", "St. Louis", "MO", "63403");
         Person p1 = new Person("John Doe", "636-643-5698", a1);
-       
         directory.addPerson(p1); // groomer; directory.addDog(d1)
 
-       
         Address a2 = new Address("324 Main St", "St. Louis", "MO", "63303");
         Person p2 = new Person("John Doe", "847-539-0126", a2);
-       
         directory.addPerson(p2);
-
-        
+   
         Address a3 = new Address("574 Pole ave", "St. Peters", "MO", "63333");
         Person p3 = new Person("John Michael West Doe", "562-859-2375", a3);
-
         directory.addPerson(p3);
-
        
         int choice = 0;
+
         do {
             try {
 
