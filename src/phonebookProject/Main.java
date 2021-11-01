@@ -6,33 +6,31 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
-        // import scanner object
+        
         Scanner in = new Scanner(System.in);
-
-        // instantiate Persons and populate directory calling the phoneBook method
+        
         StoredData directory = new StoredData();
         Person newPerson = new Person();
-        //  newPerson.addAddress();
+     
 
         Address a1 = new Address("Market St", "St. Louis", "MO", "63403");
         Person p1 = new Person("John Doe", "636-643-5698", a1);
-        //p1.addAddress("Market St", "St. Louis", "MO", "63403");
-
+       
         directory.addPerson(p1); // groomer; directory.addDog(d1)
 
+       
         Address a2 = new Address("324 Main St", "St. Louis", "MO", "63303");
         Person p2 = new Person("John Doe", "847-539-0126", a2);
-        //p2.addAddress("324 Main St", "St. Charles", "MO", "63303");
-
+       
         directory.addPerson(p2);
 
+        
         Address a3 = new Address("574 Pole ave", "St. Peters", "MO", "63333");
         Person p3 = new Person("John Michael West Doe", "562-859-2375", a3);
-        //p3.addAddress("574 Pole ave", "St. Peters", "MO", "63333");
 
         directory.addPerson(p3);
 
+       
         int choice = 0;
         do {
             try {
@@ -86,10 +84,10 @@ public class Main {
                         System.out.println("If this number is correct, please add your updates. Be sure to include the entire listing, eg:");
                         System.out.println("full name, phone number, street, city, state, zipcode");
                         directory.updateByPhoneNumber(phoneNumber);
-                        newEntryInput = in.nextLine(); // user enters long string w/commas,,,,
+                        newEntryInput = in.nextLine();
                         newEntryArray = newEntryInput.split(",");
-                        fullName = newEntryArray[0]; // String phoneNumber = newEntryArray[1];
-                        street = newEntryArray[2]; //
+                        fullName = newEntryArray[0]; 
+                        street = newEntryArray[2]; 
                         city = newEntryArray[3];
                         state = newEntryArray[4];
                         zip = newEntryArray[5];
@@ -104,7 +102,6 @@ public class Main {
                         System.out.println("To delete a record, enter a phone number to search using the following format: eg 555-555-5555 ");
                         String numberToDelete = in.nextLine(); //555-555-5555
                         directory.searchByPhoneNumber(numberToDelete);
-                        //deletePerson.setPhoneNumber(numberToDelete);
                         directory.deleteEntry(numberToDelete);
                         System.out.println("POOF! This person has now been cancelled from existence.");
                         System.out.println("\n\n--------------------------------------------------------------------------------");
