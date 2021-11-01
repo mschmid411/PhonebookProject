@@ -10,10 +10,9 @@ public class StoredData {
 
     // CASE 1 - add a new person to directory
     public void addPerson(Person newPerson) {
-
+        
         // create temporary array that is 1 larger than current array
         Person temp[] = new Person[phoneBook.length + 1];
-
 
         // add the Person in the original array to the temporary one
         for (int i = 0; i < phoneBook.length; i++) {
